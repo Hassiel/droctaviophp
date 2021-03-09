@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Mon Mar 08 2021 20:08:11 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Mar 09 2021 03:09:57 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5fb84b55d6eff256a92250ee" data-wf-site="5fb84b55d6eff209e92250ed">
 <head>
   <meta charset="utf-8">
@@ -180,26 +180,11 @@
   <section id="blog" class="section-wrapper _2 _3">
     <div class="section-content-wrapper especialidades">
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Blog</h2>
-      <div data-w-id="535207ea-1fbb-e20f-fd19-5efc25f569ba" class="blog-post">
-        <a style="-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="https://www.notion.so/Prueba-da55329ee64e417d97d0a5caf1cf4bfe" target="_blank" class="card-blog w-inline-block">
-          <div class="card-content"><img src="images/Dr.jpg" loading="lazy" sizes="(max-width: 479px) 90vw, (max-width: 767px) 24vw, (max-width: 991px) 17vw, (max-width: 1279px) 15vw, (max-width: 1439px) 16vw, (max-width: 1919px) 17vw, 20vw" srcset="images/Dr-p-500.jpeg 500w, images/Dr.jpg 640w" alt="" class="card-image">
-            <h4 class="card-title">Heading</h4>
-            <p class="card-description">Breve descripción de publicación.</p>
-            <div class="card-date">01/01/2021</div>
-          </div>
-        </a>
-        <a style="-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="#" class="card-blog w-inline-block">
-          <div class="card-content"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="card-image">
-            <h4 class="card-title">Heading</h4>
-            <p class="card-description">Breve descripción de publicación.</p>
-            <div class="card-date">01/01/2021</div>
-          </div>
-        </a>
-        <a style="-webkit-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="#" class="card-blog w-inline-block">
-          <div class="card-content"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="card-image">
-            <h4 class="card-title">Heading</h4>
-            <p class="card-description">Breve descripción de publicación.</p>
-            <div class="card-date">01/01/2021</div>
+      <div class="w-layout-grid blog">
+        <a href="#" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+          <div class="bloginfocard">
+            <h4 class="blogcardheader">Heading</h4>
+            <p class="blogcardinfo">Prueba</p>
           </div>
         </a>
       </div>
