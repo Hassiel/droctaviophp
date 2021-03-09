@@ -1,11 +1,22 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Mar 09 2021 03:09:57 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="6046de8b3115c3b5e7d74c56" data-wf-site="5fb84b55d6eff209e92250ed">
+<html data-wf-page="6046d8587a61fbdee210925b" data-wf-site="5fb84b55d6eff209e92250ed">
 <head>
   <meta charset="utf-8">
-  <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" type="text/css">
-  <link href="{{ asset('css/drsalvadoroctavio.webflow.css') }}" rel="stylesheet" type="text/css">
+  <title>Blog</title>
+  <meta content="Contenido mensual sobre, ortopedia, traumatología, tumores óseos, etc." name="description">
+  <meta content="Blog" property="og:title">
+  <meta content="Contenido mensual sobre, ortopedia, traumatología, tumores óseos, etc." property="og:description">
+  <meta content="Blog" property="twitter:title">
+  <meta content="Contenido mensual sobre, ortopedia, traumatología, tumores óseos, etc." property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="VQN-I-G7lHoYSxWWxJCR_fbR2Xf_DJNwTpH-aj8Axpk" name="google-site-verification">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/drsalvadoroctavio.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -22,9 +33,6 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a data-w-id="d5aea4cb-20c0-e048-8005-d6a1ee6e75eb" href="{{ 'index' }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
-      <div class="volvertext">Volver</div>
-    </a>
     <a href="index.html" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
@@ -34,10 +42,18 @@
       <div class="l-nea"></div>
     </div>
   </section>
-  @yield('content')
-  
-  <!--Footer-->
-  <footer id="footer" class="footer section">
+  <div class="sectionextra">
+    <h2 class="titulo-section">Heading</h2>
+    <div class="w-layout-grid blog grid-3">
+      <a href="#" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+        <div class="bloginfocard">
+          <h4 class="blogcardheader">Heading</h4>
+          <p class="blogcardinfo">Prueba</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <footer id="footer" class="footer">
     <div class="footercontainer">
       <div class="div-block-2">
         <h4 class="footer-h4">Dr. Salvador Octavio Ramírez Valdivia</h4>

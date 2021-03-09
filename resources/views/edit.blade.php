@@ -2,4 +2,8 @@
 
 @section('content')
 
+    <div class="sectionextra">
+
+    </div>
+
 @endsection

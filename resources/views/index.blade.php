@@ -188,8 +188,8 @@
           </div>
         </a>
       </div>
-      <a href="https://www.notion.so/Dr-Salvador-Octavio-Blog-76ba5440048c440899d6e08224ee237a" target="_blank" class="button cta _2 w-button">Ver más publicaciones</a>
-      <link rel="prefetch" href="https://www.notion.so/Dr-Salvador-Octavio-Blog-76ba5440048c440899d6e08224ee237a">
+      <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
+      <link rel="prefetch" href="{{ route('blogs.index') }}">
     </div>
   </section>
   <section id="contacto" class="section-wrapper">
