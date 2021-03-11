@@ -10,7 +10,9 @@ class BlogController extends Controller
     //VISTA PRINCIPAL
     public function index()
     {
-        return view ('posts');
+        $blogs = Blog::all();
+
+        return view ('posts')->with('blogs', $blogs);
     }
 
     //VISTA CREAR
@@ -22,13 +24,20 @@ class BlogController extends Controller
 
     public function store(Request $request)
     {
-        //
+        $blog = Blog::create([
+            'name' => $request->name,
+            'area' => $request->area,
+            'description' => $request->description,
+            'youtube' => $request->youtube,
+        ]);
     }
 
     //VISTA DE UNA SOLA BLOG
-    public function show(Blog $blog)
+    public function show($id)
     {
-        //
+        $blog = Blog::find($id);
+
+        return view('show')->with('blog' ,$blog);
     }
 
     //ACTUALIZAR O EDITAR BLOG

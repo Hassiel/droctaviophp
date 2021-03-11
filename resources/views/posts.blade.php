@@ -45,12 +45,15 @@
   <div class="sectionextra">
     <h2 class="titulo-section">Heading</h2>
     <div class="w-layout-grid blog grid-3">
-      <a href="#" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+      @foreach ($blogs as $blog)
+      <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
         <div class="bloginfocard">
-          <h4 class="blogcardheader">Heading</h4>
-          <p class="blogcardinfo">Prueba</p>
+          <h4 class="blogcardheader">{{ $blog->name }}</h4>
+          <p class="blogcardinfo">{{ $blog->area }}</p>
+          <p class="blogcardinfo">{{ $blog->created_at }}</p>
         </div>
       </a>
+      @endforeach
     </div>
   </div>
   <footer id="footer" class="footer">
