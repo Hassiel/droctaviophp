@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     
-    //VISTA PRINCIPAL
+    //VISTA BLOGS
     public function index()
     {
         $blogs = Blog::all();
@@ -16,13 +16,14 @@ class BlogController extends Controller
         return view ('posts')->with('blogs', $blogs);
     }
 
+    //VISTA INDEX
     public function principal()
     {
         $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
 
         return view ('index')->with('blogs', $blogs);
     }
-
+    
     //VISTA CREAR
     //FORMULARIO DE CREACIÓN
     public function create()

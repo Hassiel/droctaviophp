@@ -14,8 +14,8 @@
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="images/webclip.png" rel="apple-touch-icon">
+  <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
+  <link href="{{ asset('images/webclip.png') }}" rel="apple-touch-icon">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NZN7CD5KEV"></script>
   <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-NZN7CD5KEV', {'anonymize_ip': true});</script>
   <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script><!--  Privado Notice start  -->
@@ -28,7 +28,7 @@
   <section id="hero" class="hero">
     <section id="hero" class="hero-wrapper">
       <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
-        <a href="#hero" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <a href="#hero" class="logo w-inline-block"><img src="{{ asset('images/LOGO-DR.png') }}" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
         <div class="nav-bar">
           <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
             <a href="#hero" class="link-scroll">Inicio</a>
@@ -133,15 +133,15 @@
       <div class="text-block">This is some text inside of a div block.</div>
       <div class="text-block">This is some text inside of a div block.</div>
       <div class="instituciones">
-        <a href="https://hospitalesangeles.com/datos.php?ID=MO0462" target="_blank" class="w-inline-block"><img src="images/Hospital_angeles_Leon-logo-622696616D-seeklogo.com.png" loading="lazy" width="140" alt="Hospital Angeles" class="image-2"></a>
-        <a href="https://smcc.com.mx/medicos-socios-de-la-smcc/" target="_blank" class="w-inline-block"><img src="images/cropped-logo-smcc.png" loading="lazy" width="160" sizes="(max-width: 479px) 41vw, (max-width: 767px) 160px, (max-width: 991px) 20vw, 160px" srcset="images/cropped-logo-smcc-p-500.png 500w, images/cropped-logo-smcc.png 589w" alt="Sociedad Mexicana de Cirugía de Cadera" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="images/unnamed.png" loading="lazy" width="60" alt="Federación Mexicana de colegios de Ortopedía YTraumatología" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="images/logo-colegio.png" loading="lazy" width="120" alt="Colegio Mexicano de Ortopedía y Traumatología" class="image-2"></a>
+        <a href="https://hospitalesangeles.com/datos.php?ID=MO0462" target="_blank" class="w-inline-block"><img src="{{ asset('images/Hospital_angeles_Leon-logo-622696616D-seeklogo.com.png') }}" loading="lazy" width="140" alt="Hospital Angeles" class="image-2"></a>
+        <a href="https://smcc.com.mx/medicos-socios-de-la-smcc/" target="_blank" class="w-inline-block"><img src="{{ asset('images/cropped-logo-smcc.png') }}" loading="lazy" width="160" sizes="(max-width: 479px) 41vw, (max-width: 767px) 160px, (max-width: 991px) 20vw, 160px" srcset="images/cropped-logo-smcc-p-500.png 500w, images/cropped-logo-smcc.png 589w" alt="Sociedad Mexicana de Cirugía de Cadera" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="{{ asset('images/unnamed.png') }}" loading="lazy" width="60" alt="Federación Mexicana de colegios de Ortopedía YTraumatología" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="{{ asset('images/logo-colegio.png') }}" loading="lazy" width="120" alt="Colegio Mexicano de Ortopedía y Traumatología" class="image-2"></a>
       </div>
       <div class="instituciones">
         <a href="https://www.segurosmnyl.com.mx/itesm/DirectorioProveedores/DetalleProveedor/tabid/950/ItemId/149238/SALVADOR-OCTAVIO-RAMIREZ-VALDIVIA.aspx" target="_blank" class="w-inline-block"><img src="images/logo_smnyl.gif" loading="lazy" width="157" alt="" class="image-2"></a>
-        <a href="#" target="_blank" class="w-inline-block"><img src="images/amecra.png" loading="lazy" width="136" sizes="(max-width: 479px) 40vw, 136px" srcset="images/amecra-p-500.png 500w, images/amecra-p-800.png 800w, images/amecra-p-1080.png 1080w, images/amecra-p-1600.png 1600w, images/amecra-p-2000.png 2000w, images/amecra.png 2584w" alt="AMECRA" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="images/logo.png" loading="lazy" width="107" alt="CONACEM" class="image-2"></a>
+        <a href="#" target="_blank" class="w-inline-block"><img src="{{ asset('images/amecra.png') }}" loading="lazy" width="136" sizes="(max-width: 479px) 40vw, 136px" srcset="images/amecra-p-500.png 500w, images/amecra-p-800.png 800w, images/amecra-p-1080.png 1080w, images/amecra-p-1600.png 1600w, images/amecra-p-2000.png 2000w, images/amecra.png 2584w" alt="AMECRA" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="{{ asset('images/logo.png') }}" loading="lazy" width="107" alt="CONACEM" class="image-2"></a>
       </div>
     </div>
   </section>
@@ -226,7 +226,7 @@
         <div data-w-id="d54142d4-1416-39ab-0b84-9a0faa8a576d" style="height:50px" class="consultorio">
           <div class="encabezado">
             <h5 class="heading-2">Silao, Gto.</h5>
-            <div data-w-id="e0e2e0e9-d7e3-cbef-4c5e-bf217a3736d9" class="up-down"><img src="images/Copia-de-up-arrow.svg" loading="lazy" style="display:none" data-w-id="ff6d2b1b-54f4-dd9c-b4d1-124852139476" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="1ebfa936-f99b-a123-19f1-7e473e6dc5e1" alt=""></div>
+            <div data-w-id="e0e2e0e9-d7e3-cbef-4c5e-bf217a3736d9" class="up-down"><img src="{{ asset('images/Copia-de-up-arrow.svg') }}" loading="lazy" style="display:none" data-w-id="ff6d2b1b-54f4-dd9c-b4d1-124852139476" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="1ebfa936-f99b-a123-19f1-7e473e6dc5e1" alt=""></div>
           </div>
           <div data-w-id="f555b3e0-7fc9-b3ac-e2db-837e9598b734" style="height:50px" class="informacion-consultorio">
             <div style="display:none" class="mapa">
@@ -242,7 +242,7 @@
         <div data-w-id="accafb9b-a639-da46-9080-9739cbbf0366" style="height:50px" class="consultorio">
           <div class="encabezado">
             <h5 class="heading-2">León, Gto.</h5>
-            <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036a" class="up-down"><img src="images/up-arrow.svg" loading="lazy" style="display:none" data-w-id="accafb9b-a639-da46-9080-9739cbbf036b" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="accafb9b-a639-da46-9080-9739cbbf036c" alt=""></div>
+            <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036a" class="up-down"><img src="{{ asset('images/up-arrow.svg') }}" loading="lazy" style="display:none" data-w-id="accafb9b-a639-da46-9080-9739cbbf036b" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="accafb9b-a639-da46-9080-9739cbbf036c" alt=""></div>
           </div>
           <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036d" style="height:50px" class="informacion-consultorio">
             <div style="display:none" class="mapa-2">
