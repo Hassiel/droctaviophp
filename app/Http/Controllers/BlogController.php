@@ -7,12 +7,20 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    
     //VISTA PRINCIPAL
     public function index()
     {
         $blogs = Blog::all();
 
         return view ('posts')->with('blogs', $blogs);
+    }
+
+    public function principal()
+    {
+        $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+
+        return view ('index')->with('blogs', $blogs);
     }
 
     //VISTA CREAR

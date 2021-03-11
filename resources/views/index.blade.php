@@ -181,12 +181,14 @@
     <div class="section-content-wrapper especialidades">
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Blog</h2>
       <div class="w-layout-grid blog">
-        <a href="#" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+        @foreach ($blogs as $blog)
+        <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
           <div class="bloginfocard">
-            <h4 class="blogcardheader">Heading</h4>
-            <p class="blogcardinfo">Prueba</p>
+            <h4 class="blogcardheader">{{ $blog->name }}</h4>
+            <p class="blogcardinfo">{{ $blog->area }}</p>
           </div>
         </a>
+        @endforeach
       </div>
       <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
       <link rel="prefetch" href="{{ route('blogs.index') }}">
