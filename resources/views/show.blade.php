@@ -88,7 +88,7 @@
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <div class="iniciodesesiondoc"> Dr.Octavio  </div>
+          <a href="#" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>
