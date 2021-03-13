@@ -25,7 +25,7 @@
     <a data-w-id="d5aea4cb-20c0-e048-8005-d6a1ee6e75eb" href="{{ 'index' }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
       <div class="volvertext">Volver</div>
     </a>
-    <a href="index.html" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
