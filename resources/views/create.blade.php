@@ -45,7 +45,7 @@
       <form id="email-form" name="email-form" data-name="Email Form">
         <label for="name-2" class="creationlabel">Título</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="" id="name-2" required="">
-        <label for="area-2" class="creationlabel">Área </label>
+        <label for="area-2" class="creationlabel">Área</label>
         <select id="area-2" name="area" data-name="area" class="creationinput w-select">
           <option value="">Elige uno</option>
           <option value="ortopedia">Ortopedia</option>
