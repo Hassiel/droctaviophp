@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Mar 09 2021 03:09:57 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Mar 13 2021 20:57:05 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6046d8587a61fbdee210925b" data-wf-site="5fb84b55d6eff209e92250ed">
 <head>
   <meta charset="utf-8">
@@ -14,9 +14,9 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="VQN-I-G7lHoYSxWWxJCR_fbR2Xf_DJNwTpH-aj8Axpk" name="google-site-verification">
   <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/drsalvadoroctavio.webflow.css" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/drsalvadoroctavio.webflow.css') }}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -42,18 +42,34 @@
       <div class="l-nea"></div>
     </div>
   </section>
+  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ URL::previous() }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+    <div class="volvertext">Volver</div>
+  </a>
   <div class="sectionextra">
     <h2 class="titulo-section">Heading</h2>
     <div class="w-layout-grid blog grid-3">
-      @foreach ($blogs as $blog)
-      <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
-        <div class="bloginfocard">
-          <h4 class="blogcardheader">{{ $blog->name }}</h4>
-          <p class="blogcardinfo">{{ $blog->area }}</p>
-          <p class="blogcardinfo">{{ $blog->created_at }}</p>
+      <div class="cardcontainer">
+        @foreach ($blogs as $blog)
+        <a data-w-id="f7fb5be5-67b5-9649-027c-e5147f9d9cbb" style="-webkit-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" 
+          href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+          <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+          <div class="bloginfocard">
+            <h4 class="blogcardheader">{{ $blog->name }}</h4>
+            <p class="blogcardinfo">{{ $blog->area }}</p>
+          </div>
+        </a>
+        <div class="cardbuttoncontainer">
+          <a href="#" class="cardbutton _1 w-inline-block"><img src="images/draw.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
+          <a href="#" class="cardbutton _2 w-inline-block"><img src="images/delete.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
+        </div>
+        @endforeach
+      </div>
+      <a data-w-id="e5c33930-a9d6-c5f2-53ae-f8bf50989d46" href="#" class="blogcard newpost w-inline-block">
+        <div class="bloginfocard newpost">
+          <div data-w-id="875cdc08-dfa6-61ba-aa8c-fa520186febf" data-animation-type="lottie" data-src="documents/add-post.json" data-loop="0" data-direction="1" data-autoplay="0" data-is-ix2-target="1" data-renderer="svg" data-default-duration="3" data-duration="0" data-ix2-initial-state="0"></div>
+          <h4 class="blogcardheader">Nueva publicación</h4>
         </div>
       </a>
-      @endforeach
     </div>
   </div>
   <footer id="footer" class="footer">
@@ -82,13 +98,13 @@
           <a href="aviso-reglamentario.html" class="link-block w-inline-block">
             <div class="text-block-3">Aviso reglamentario</div>
           </a>
-          <div class="text-block-2"> ©  </div>
+          <div class="iniciodesesiondoc"> ©  </div>
           <div class="html-embed w-embed w-script">
             <script type="text/javascript">
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <div class="text-block-2"> Dr.Octavio  </div>
+          <a href="#" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>
@@ -100,7 +116,7 @@
     </div>
   </footer>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb84b55d6eff209e92250ed" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="{{ asset('js/webflow.js') }}" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

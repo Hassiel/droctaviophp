@@ -1,5 +1,5 @@
 <!DOCTYPE html><!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Mar 09 2021 03:09:57 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Sat Mar 13 2021 20:57:05 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5fb84b55d6eff256a92250ee" data-wf-site="5fb84b55d6eff209e92250ed">
 <head>
   <meta charset="utf-8">
@@ -14,8 +14,8 @@
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
   <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
-  <link href="{{ asset('images/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
-  <link href="{{ asset('images/webclip.png') }}" rel="apple-touch-icon">
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-NZN7CD5KEV"></script>
   <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-NZN7CD5KEV', {'anonymize_ip': true});</script>
   <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script><!--  Privado Notice start  -->
@@ -28,7 +28,7 @@
   <section id="hero" class="hero">
     <section id="hero" class="hero-wrapper">
       <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
-        <a href="#hero" class="logo w-inline-block"><img src="{{ asset('images/LOGO-DR.png') }}" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <a href="#hero" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
         <div class="nav-bar">
           <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
             <a href="#hero" class="link-scroll">Inicio</a>
@@ -133,15 +133,15 @@
       <div class="text-block">This is some text inside of a div block.</div>
       <div class="text-block">This is some text inside of a div block.</div>
       <div class="instituciones">
-        <a href="https://hospitalesangeles.com/datos.php?ID=MO0462" target="_blank" class="w-inline-block"><img src="{{ asset('images/Hospital_angeles_Leon-logo-622696616D-seeklogo.com.png') }}" loading="lazy" width="140" alt="Hospital Angeles" class="image-2"></a>
-        <a href="https://smcc.com.mx/medicos-socios-de-la-smcc/" target="_blank" class="w-inline-block"><img src="{{ asset('images/cropped-logo-smcc.png') }}" loading="lazy" width="160" sizes="(max-width: 479px) 41vw, (max-width: 767px) 160px, (max-width: 991px) 20vw, 160px" srcset="images/cropped-logo-smcc-p-500.png 500w, images/cropped-logo-smcc.png 589w" alt="Sociedad Mexicana de Cirugía de Cadera" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="{{ asset('images/unnamed.png') }}" loading="lazy" width="60" alt="Federación Mexicana de colegios de Ortopedía YTraumatología" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="{{ asset('images/logo-colegio.png') }}" loading="lazy" width="120" alt="Colegio Mexicano de Ortopedía y Traumatología" class="image-2"></a>
+        <a href="https://hospitalesangeles.com/datos.php?ID=MO0462" target="_blank" class="w-inline-block"><img src="images/Hospital_angeles_Leon-logo-622696616D-seeklogo.com.png" loading="lazy" width="140" alt="Hospital Angeles" class="image-2"></a>
+        <a href="https://smcc.com.mx/medicos-socios-de-la-smcc/" target="_blank" class="w-inline-block"><img src="images/cropped-logo-smcc.png" loading="lazy" width="160" sizes="(max-width: 479px) 41vw, (max-width: 767px) 160px, (max-width: 991px) 20vw, 160px" srcset="images/cropped-logo-smcc-p-500.png 500w, images/cropped-logo-smcc.png 589w" alt="Sociedad Mexicana de Cirugía de Cadera" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="images/unnamed.png" loading="lazy" width="60" alt="Federación Mexicana de colegios de Ortopedía YTraumatología" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="images/logo-colegio.png" loading="lazy" width="120" alt="Colegio Mexicano de Ortopedía y Traumatología" class="image-2"></a>
       </div>
       <div class="instituciones">
         <a href="https://www.segurosmnyl.com.mx/itesm/DirectorioProveedores/DetalleProveedor/tabid/950/ItemId/149238/SALVADOR-OCTAVIO-RAMIREZ-VALDIVIA.aspx" target="_blank" class="w-inline-block"><img src="images/logo_smnyl.gif" loading="lazy" width="157" alt="" class="image-2"></a>
-        <a href="#" target="_blank" class="w-inline-block"><img src="{{ asset('images/amecra.png') }}" loading="lazy" width="136" sizes="(max-width: 479px) 40vw, 136px" srcset="images/amecra-p-500.png 500w, images/amecra-p-800.png 800w, images/amecra-p-1080.png 1080w, images/amecra-p-1600.png 1600w, images/amecra-p-2000.png 2000w, images/amecra.png 2584w" alt="AMECRA" class="image-2"></a>
-        <a href="#" class="w-inline-block"><img src="{{ asset('images/logo.png') }}" loading="lazy" width="107" alt="CONACEM" class="image-2"></a>
+        <a href="#" target="_blank" class="w-inline-block"><img src="images/amecra.png" loading="lazy" width="136" sizes="(max-width: 479px) 40vw, 136px" srcset="images/amecra-p-500.png 500w, images/amecra-p-800.png 800w, images/amecra-p-1080.png 1080w, images/amecra-p-1600.png 1600w, images/amecra-p-2000.png 2000w, images/amecra.png 2584w" alt="AMECRA" class="image-2"></a>
+        <a href="#" class="w-inline-block"><img src="images/logo.png" loading="lazy" width="107" alt="CONACEM" class="image-2"></a>
       </div>
     </div>
   </section>
@@ -151,7 +151,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
     </div>
     <div class="section-content-wrapper especialidades _2">
-      <div class="especialidad-card">
+      <div id="w-node-_4dfa69d3-9ad8-28e2-f7e6-27cc3d7491c7-a92250ee" class="especialidad-card">
         <h3 data-w-id="4dfa69d3-9ad8-28e2-f7e6-27cc3d7491c8" style="-webkit-transform:translate3d(40px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(40px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(40px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(40px, null, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);display:inline-block;opacity:0" class="especialidades-titulo">Cirugía Artroscopica en Rodilla y Hombro</h3>
         <p class="descripcion-especialidad">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
       </div>
@@ -182,12 +182,14 @@
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Blog</h2>
       <div class="w-layout-grid blog">
         @foreach ($blogs as $blog)
-        <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
-          <div class="bloginfocard">
-            <h4 class="blogcardheader">{{ $blog->name }}</h4>
-            <p class="blogcardinfo">{{ $blog->area }}</p>
-          </div>
-        </a>
+          <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+            <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+              <div class="bloginfocard">
+                  <h4 class="blogcardheader">{{ $blog->name }}</h4>
+                  <p class="blogcardinfo">{{ $blog->area }}</p>
+                  <p class="blogcardinfo date">{{ $blog->created_at }}</p>
+              </div>
+          </a>
         @endforeach
       </div>
       <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
@@ -199,10 +201,7 @@
       <h2 data-w-id="090c599f-d657-04b2-d33b-ea5840b927ab" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section">¿Tienes algún caso en especial?</h2>
       <p class="contacto-p">No dudes comunicarte conmigo y pronto tendré una respuesta para ti.</p>
       <div class="form-block w-form">
-        <form id="wf-form-Contacto" name="wf-form-Contacto" data-name="Contacto" action="https://api.form-data.com/f/wl6d1awh9ofilmjrg5e7qo" method="post" redirect="https://drsalvadoroctavio.webflow.io/gracias" data-redirect="https://drsalvadoroctavio.webflow.io/gracias" class="form">
-          <!--campo de protección de formulario-->
-                {{ csrf_field() }}
-          <input type="text" class="text-field w-input" maxlength="256" name="name" data-name="name" placeholder="nombre completo" id="name" required=""><input type="email" class="text-field-3 w-input" maxlength="256" name="email" data-name="email" placeholder="correo electrónico" id="email" required=""><input type="tel" class="text-field-4 w-input" maxlength="256" name="numero" data-name="numero" placeholder="+52 (teléfono)" id="numero" required=""><textarea placeholder="mensaje.." maxlength="5000" id="mensaje-2" name="mensaje" data-name="mensaje" class="textarea w-input"></textarea>
+        <form id="wf-form-Contacto" name="wf-form-Contacto" data-name="Contacto" action="https://api.form-data.com/f/wl6d1awh9ofilmjrg5e7qo" method="post" redirect="https://drsalvadoroctavio.webflow.io/gracias" data-redirect="https://drsalvadoroctavio.webflow.io/gracias" class="form"><input type="text" class="text-field w-input" maxlength="256" name="name" data-name="name" placeholder="nombre completo" id="name" required=""><input type="email" class="text-field-3 w-input" maxlength="256" name="email" data-name="email" placeholder="correo electrónico" id="email" required=""><input type="tel" class="text-field-4 w-input" maxlength="256" name="numero" data-name="numero" placeholder="+52 (teléfono)" id="numero" required=""><textarea placeholder="mensaje.." maxlength="5000" id="mensaje-2" name="mensaje" data-name="mensaje" class="textarea w-input"></textarea>
           <div class="w-embed"><input type="text" name="xx_password" style="display:none !important" tabindex="-1" autocomplete="off"></div>
           <div class="html-embed-3 w-embed"><input type="hidden" name="_gotcha"><input></div>
           <div class="w-embed">
@@ -226,7 +225,7 @@
         <div data-w-id="d54142d4-1416-39ab-0b84-9a0faa8a576d" style="height:50px" class="consultorio">
           <div class="encabezado">
             <h5 class="heading-2">Silao, Gto.</h5>
-            <div data-w-id="e0e2e0e9-d7e3-cbef-4c5e-bf217a3736d9" class="up-down"><img src="{{ asset('images/Copia-de-up-arrow.svg') }}" loading="lazy" style="display:none" data-w-id="ff6d2b1b-54f4-dd9c-b4d1-124852139476" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="1ebfa936-f99b-a123-19f1-7e473e6dc5e1" alt=""></div>
+            <div data-w-id="e0e2e0e9-d7e3-cbef-4c5e-bf217a3736d9" class="up-down"><img src="images/Copia-de-up-arrow.svg" loading="lazy" style="display:none" data-w-id="ff6d2b1b-54f4-dd9c-b4d1-124852139476" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="1ebfa936-f99b-a123-19f1-7e473e6dc5e1" alt=""></div>
           </div>
           <div data-w-id="f555b3e0-7fc9-b3ac-e2db-837e9598b734" style="height:50px" class="informacion-consultorio">
             <div style="display:none" class="mapa">
@@ -242,7 +241,7 @@
         <div data-w-id="accafb9b-a639-da46-9080-9739cbbf0366" style="height:50px" class="consultorio">
           <div class="encabezado">
             <h5 class="heading-2">León, Gto.</h5>
-            <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036a" class="up-down"><img src="{{ asset('images/up-arrow.svg') }}" loading="lazy" style="display:none" data-w-id="accafb9b-a639-da46-9080-9739cbbf036b" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="accafb9b-a639-da46-9080-9739cbbf036c" alt=""></div>
+            <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036a" class="up-down"><img src="images/up-arrow.svg" loading="lazy" style="display:none" data-w-id="accafb9b-a639-da46-9080-9739cbbf036b" alt=""><img src="images/Copia-de-up-arrow.svg" loading="lazy" data-w-id="accafb9b-a639-da46-9080-9739cbbf036c" alt=""></div>
           </div>
           <div data-w-id="accafb9b-a639-da46-9080-9739cbbf036d" style="height:50px" class="informacion-consultorio">
             <div style="display:none" class="mapa-2">
@@ -284,13 +283,13 @@
           <a href="aviso-reglamentario.html" class="link-block w-inline-block">
             <div class="text-block-3">Aviso reglamentario</div>
           </a>
-          <div class="text-block-2"> ©  </div>
+          <div class="iniciodesesiondoc"> ©  </div>
           <div class="html-embed w-embed w-script">
             <script type="text/javascript">
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <div class="text-block-2"> Dr.Octavio  </div>
+          <a href="#" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>
