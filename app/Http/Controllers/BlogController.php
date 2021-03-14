@@ -28,7 +28,7 @@ class BlogController extends Controller
     //FORMULARIO DE CREACIÓN
     public function create()
     {
-        //
+        return view('create');
     }
 
     public function store(Request $request)
@@ -50,9 +50,10 @@ class BlogController extends Controller
     }
 
     //ACTUALIZAR O EDITAR BLOG
-    public function edit(Blog $blog)
+    public function edit($id)
     {
-        //
+        $blog = Blog::find($id);
+        return view('edit')->with('blog', $blog);
     }
 
     public function update(Request $request, Blog $blog)
@@ -60,8 +61,12 @@ class BlogController extends Controller
         //
     }
 
-    public function destroy(Blog $blog)
+    public function destroy($id)
     {
-        //
+        $blog = Blog::find($id);
+
+        $blog->delete();
+
+        return redirect()->route('blogs.index');
     }
 }
