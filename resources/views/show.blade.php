@@ -33,7 +33,8 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a href="index.html" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block">
+      <img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
@@ -99,7 +100,7 @@
       </a>
     </div>
   </footer>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="#" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ route('blogs.index') }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
     <div class="volvertext">Volver</div>
   </a>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb84b55d6eff209e92250ed" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

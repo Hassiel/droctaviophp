@@ -43,60 +43,49 @@
       <div class="l-nea"></div>
     </div>
   </section>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ URL::previous() }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ route('principal') }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
     <div class="volvertext">Volver</div>
   </a>
   <div class="sectionextra">
     <h2 class="titulo-section">Heading</h2>
-    <div class="w-layout-grid blog grid-3">
-      <div class="cardcontainer">
+
+
+    <div class="w-dyn-list">
+      <div role="list" class="blog-list w-dyn-items">
         @foreach ($blogs as $blog)
-        <a data-w-id="f7fb5be5-67b5-9649-027c-e5147f9d9cbb" style="-webkit-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0px, 40px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" 
-          href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
-          <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
-          <div class="bloginfocard">
-            <h4 class="blogcardheader">{{ $blog->name }}</h4>
-            <p class="blogcardinfo">{{ $blog->area }}</p>
-          </div>
-        </a>
-        <div class="cardbuttoncontainer">
-          <a href="#" class="cardbutton _1 w-inline-block"><img src="images/draw.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
-          <form action=""></form>
-          <a href="#" class="cardbutton _2 w-inline-block" data-bs-toggle="modal" data-bs-target="#deletePost">
-            <img src="images/delete.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
-        </div>
-        <!-- Modal -->
-<div class="modal fade" id="deletePost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="blogcardheader" id="exampleModalLabel">¿Seguro que quieres eliminar?</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p class="blogcardinfo">Ya no hay marcha atrás eee</p>
-        <br>
-        <p class="blogcardinfo">Sobre advertencia no hay engaño (eso dijo mi mamá)</p>
-      </div>
-      <div class="modal-footer">
-        <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST">
+        <div role="listitem" class="w-dyn-item">
+          <div class="cardcontainer">
+            <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+              <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+              <div class="bloginfocard">
+                <h4 class="blogcardheader">{{ $blog->name }}</h4>
+                <p class="blogcardinfo">{{ $blog->area }}</p>
+              </div>
+            </a>
+            <div class="cardbuttoncontainer">
+              <a href="{{ route('blogs.edit', $blog->id) }}" class="cardbutton _1 w-inline-block">
+                <img src="images/draw.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
+               <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST">
             {{ csrf_field() }}
-            {{ method_field('DELETE') }}
-            <button type="submit" class="btn btn-danger">Si, elimínalo</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+            {{ method_field('DELETE') }} 
+              <button type="submit" class="cardbutton _2 w-inline-block btn-outline-danger" >
+                <img src="images/delete.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
+                </form> 
+            </div>
+          </div>
+        </div>
         @endforeach
       </div>
-      <a data-w-id="e5c33930-a9d6-c5f2-53ae-f8bf50989d46" href="#" class="blogcard newpost w-inline-block">
+    </div>
+    <div class="addnewbutton">
+      <a data-w-id="e5c33930-a9d6-c5f2-53ae-f8bf50989d46" href="{{ route('blogs.create') }}" class="blogcard newpost w-inline-block">
         <div class="bloginfocard newpost">
           <div data-w-id="875cdc08-dfa6-61ba-aa8c-fa520186febf" data-animation-type="lottie" data-src="documents/add-post.json" data-loop="0" data-direction="1" data-autoplay="0" data-is-ix2-target="1" data-renderer="svg" data-default-duration="3" data-duration="0" data-ix2-initial-state="0"></div>
           <h4 class="blogcardheader">Nueva publicación</h4>
         </div>
       </a>
     </div>
+  </div>
   </div>
   <footer id="footer" class="footer">
     <div class="footercontainer">

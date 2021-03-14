@@ -37,8 +37,9 @@ class BlogController extends Controller
             'name' => $request->name,
             'area' => $request->area,
             'description' => $request->description,
-            'youtube' => $request->youtube,
         ]);
+
+        return view('show')->with('blog' ,$blog);
     }
 
     //VISTA DE UNA SOLA BLOG
@@ -56,9 +57,17 @@ class BlogController extends Controller
         return view('edit')->with('blog', $blog);
     }
 
-    public function update(Request $request, Blog $blog)
+    public function update(Request $request, $id)
     {
-        //
+        $blog = Blog::find($id);
+
+        $blog->update([
+            'name' => $request->name,
+            'area' => $request->area,
+            'description' => $request->description,
+        ]);
+
+        return view('show')->with('blog' ,$blog);
     }
 
     public function destroy($id)

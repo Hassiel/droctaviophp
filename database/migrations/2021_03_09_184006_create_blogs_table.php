@@ -18,7 +18,6 @@ class CreateBlogsTable extends Migration
             $table->string('name');
             $table->string('area')->nullable();
             $table->longText('description');
-            $table->text('youtube')->nullable();
             $table->timestamps();
         });
     }

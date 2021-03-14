@@ -9,9 +9,9 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="VQN-I-G7lHoYSxWWxJCR_fbR2Xf_DJNwTpH-aj8Axpk" name="google-site-verification">
   <meta content="Webflow" name="generator">
-  <link href="css/normalize.css" rel="stylesheet" type="text/css">
-  <link href="css/webflow.css" rel="stylesheet" type="text/css">
-  <link href="css/drsalvadoroctavio.webflow.css" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('css/drsalvadoroctavio.webflow.css') }}" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -28,7 +28,7 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a href="index.html" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
@@ -37,20 +37,31 @@
       <div class="l-nea"></div>
     </div>
   </section>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="#" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ URL::previous() }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
     <div class="volvertext">Volver</div>
   </a>
   <div class="sectionextra publish">
     <div class="w-form">
-      <form id="email-form" name="email-form" data-name="Email Form"><label for="name-2" class="creationlabel">Título</label><input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="" id="name-2" required=""><label for="area-2" class="creationlabel">Área </label><select id="area-2" name="area" data-name="area" class="creationinput w-select">
-          <option value="">Elige uno</option>
-          <option value="ortopedia">Ortopedia</option>
-          <option value="Traumatologia">Traumatología</option>
-          <option value="medicina-deportiva">Medicina Deportiva</option>
-          <option value="ejercicios">Ejercicios</option>
-          <option value="lesiones">Lesiones</option>
-          <option value="tumores">Tumores</option>
-        </select><label for="description" class="creationlabel">Contenido</label><textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea><label for="youtube" class="creationlabel">Link de Youtube</label><input type="text" class="creationinput w-input" maxlength="256" name="youtube" data-name="youtube" placeholder="link" id="youtbe"><input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button"></form>
+      <form action="{{ route('blogs.update', $blog->id) }}" method="POST">
+            <!--campo de protección de formulario-->
+        {{ csrf_field() }}
+        {{ method_field('PUT') }}
+            <label for="name-2" class="creationlabel">Título</label>
+            <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" id="name-2" required="" value="{{ $blog->name }}">
+            <label for="area" class="creationlabel">Área </label>
+            <select id="area" name="area" data-name="area" class="creationinput w-select">
+              <option value="">Elige uno</option>
+              <option value="Ortopedia">Ortopedia</option>
+              <option value="Traumatología">Traumatología</option>
+              <option value="Medicina Deportiva">Medicina Deportiva</option>
+              <option value="Ejercicios">Ejercicios</option>
+              <option value="Lesiones">Lesiones</option>
+              <option value="Tumores">Tumores</option>
+            </select>
+            <label for="description" class="creationlabel">Contenido</label>
+            <textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input">{{ $blog->description }}</textarea>
+            <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button"  >
+      </form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>
       </div>
@@ -103,7 +114,7 @@
     </div>
   </footer>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb84b55d6eff209e92250ed" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="{{ asset('js/webflow.js') }}" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>

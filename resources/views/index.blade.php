@@ -28,7 +28,7 @@
   <section id="hero" class="hero">
     <section id="hero" class="hero-wrapper">
       <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
-        <a href="#hero" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <a href="{{ route('principal') }}" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
         <div class="nav-bar">
           <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
             <a href="#hero" class="link-scroll">Inicio</a>
