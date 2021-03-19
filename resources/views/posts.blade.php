@@ -84,7 +84,7 @@
         </div>
       </a>
     </div>
-    <div class="temasdiv">
+    <div class="temasdiv mt-5">
       <div class="w-dyn-list">
         <div role="list" class="temaslist w-dyn-items w-row">
           <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
@@ -93,21 +93,18 @@
             </a>
           </div>
         </div>
-        <div class="w-dyn-empty">
-          <div>No items found.</div>
-        </div>
       </div>
       <div class="w-embed">
         <style>
-.coolbutton5:hover {
+        .coolbutton5:hover {
 	box-shadow: 0 0 5px #97f9af,
 							0 0 25px #97f9af,
               0 0 50px #97f9af,
               0 0 200px #97f9af;
-}
-</style>
+          }
+        </style>
       </div>
-      <a href="#" class="coolbutton5 w-inline-block">
+      <a href="#" class="coolbutton5 w-inline-block mt-1">
         <div class="text-block-7">Crear nuevo tema</div>
       </a>
     </div>

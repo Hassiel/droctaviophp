@@ -19,3 +19,5 @@ Route::get('/', [
 ]);
 
 Route::resource('/blogs', 'App\Http\Controllers\BlogController');
+
+Route::resource('/temas', 'App\Http\Controllers\TopicController');

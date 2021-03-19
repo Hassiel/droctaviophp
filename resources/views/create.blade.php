@@ -59,6 +59,8 @@
         </select>
         <label for="description" class="creationlabel">Contenido</label>
         <textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
+        <!--<label for="name" class="creationlabel">Youtube</label>
+        <input type="text" class="creationinput w-input" maxlength="256" name="youtube" data-name="youtube" placeholder="Link de youtube (si tiene alguno)">-->
         <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button"></form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>

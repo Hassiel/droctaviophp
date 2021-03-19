@@ -37,6 +37,8 @@ class BlogController extends Controller
             'name' => $request->name,
             'area' => $request->area,
             'description' => $request->description,
+            'youtube' => $request->youtube,
+            'topic_id' => $request->topic_id,
         ]);
 
         return view('show')->with('blog' ,$blog);
@@ -65,6 +67,8 @@ class BlogController extends Controller
             'name' => $request->name,
             'area' => $request->area,
             'description' => $request->description,
+            'youtube' => $request->youtube,
+            'topic_id' => $request->topic_id,
         ]);
 
         return view('show')->with('blog' ,$blog);
