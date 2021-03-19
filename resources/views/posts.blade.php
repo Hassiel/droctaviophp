@@ -47,8 +47,7 @@
     <div class="volvertext">Volver</div>
   </a>
   <div class="sectionextra">
-    <h2 class="titulo-section">Heading</h2>
-
+    <h2 class="titulo-section">Blog del Dr. Octavio</h2>
 
     <div class="w-dyn-list">
       <div role="list" class="blog-list w-dyn-items">
@@ -85,6 +84,34 @@
         </div>
       </a>
     </div>
+    <div class="temasdiv">
+      <div class="w-dyn-list">
+        <div role="list" class="temaslist w-dyn-items w-row">
+          <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
+            <a href="#" class="coolbutton5 existentes w-inline-block">
+              <div class="text-block-6">Hola</div>
+            </a>
+          </div>
+        </div>
+        <div class="w-dyn-empty">
+          <div>No items found.</div>
+        </div>
+      </div>
+      <div class="w-embed">
+        <style>
+.coolbutton5:hover {
+	box-shadow: 0 0 5px #97f9af,
+							0 0 25px #97f9af,
+              0 0 50px #97f9af,
+              0 0 200px #97f9af;
+}
+</style>
+      </div>
+      <a href="#" class="coolbutton5 w-inline-block">
+        <div class="text-block-7">Crear nuevo tema</div>
+      </a>
+    </div>
+  </div>
   </div>
   </div>
   <footer id="footer" class="footer">
