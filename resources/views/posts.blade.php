@@ -59,7 +59,7 @@
               <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                 <h4 class="blogcardheader">{{ $blog->name }}</h4>
-                <p class="blogcardinfo">{{ $blog->area }}</p>
+                <span class="badge bg-info text-white" style="font-weight: 600">{{ $blog->area }}</span>
               </div>
             </a>
             <div class="cardbuttoncontainer">

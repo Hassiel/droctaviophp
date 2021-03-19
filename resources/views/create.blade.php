@@ -51,7 +51,7 @@
         <select id="area" name="area" data-name="area" class="creationinput w-select">
           <option value="">Elige uno</option>
           <option value="Ortopedia">Ortopedia</option>
-          <option value="Traumatologia">Traumatología</option>
+          <option value="Traumatología">Traumatología</option>
           <option value="Medicina Deportiva">Medicina Deportiva</option>
           <option value="Ejercicios">Ejercicios</option>
           <option value="Lesiones">Lesiones</option>
