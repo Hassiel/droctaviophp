@@ -12,4 +12,9 @@ class Blog extends Model
     protected $fillable = [
         'name', 'area', 'description', 'youtube', 'topic_id'
     ];
+
+    public function topic()
+    {
+        return $this->belogsTo(Topic::class, 'topic_id', 'id');
+    }
 }

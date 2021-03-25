@@ -37,7 +37,7 @@
       <div class="l-nea"></div>
     </div>
   </section>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="#" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ route('blogs.index') }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
     <div class="volvertext">Volver</div>
   </a>
   <div class="sectionextra publish">
@@ -47,21 +47,19 @@
             {{ csrf_field() }}
         <label for="name" class="creationlabel">Título</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" required="">
-        <label for="area" class="creationlabel">Área</label>
-        <select id="area" name="area" data-name="area" class="creationinput w-select">
-          <option value="">Elige uno</option>
-          <option value="Ortopedia">Ortopedia</option>
-          <option value="Traumatología">Traumatología</option>
-          <option value="Medicina Deportiva">Medicina Deportiva</option>
-          <option value="Ejercicios">Ejercicios</option>
-          <option value="Lesiones">Lesiones</option>
-          <option value="Tumores">Tumores</option>
+        
+        <label for="area" class="creationlabel">Tema</label>
+        <select id="area" name="topic_id" data-name="area" class="creationinput w-select">
+          @foreach ($temas as $tema)
+              <option value="{{ $tema->id }}">{{ $tema->name }}</option>
+          @endforeach
         </select>
         <label for="description" class="creationlabel">Contenido</label>
         <textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
         <!--<label for="name" class="creationlabel">Youtube</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="youtube" data-name="youtube" placeholder="Link de youtube (si tiene alguno)">-->
-        <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button"></form>
+        <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button">
+      </form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>
       </div>

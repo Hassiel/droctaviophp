@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Topic extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name'
+    ];
+
+    public function blog()
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

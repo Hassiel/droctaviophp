@@ -48,16 +48,14 @@
         {{ method_field('PUT') }}
             <label for="name-2" class="creationlabel">Título</label>
             <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" id="name-2" required="" value="{{ $blog->name }}">
-            <label for="area" class="creationlabel">Área </label>
-            <select id="area" name="area" data-name="area" class="creationinput w-select">
-              <option value="">Elige uno</option>
-              <option value="Ortopedia">Ortopedia</option>
-              <option value="Traumatología">Traumatología</option>
-              <option value="Medicina Deportiva">Medicina Deportiva</option>
-              <option value="Ejercicios">Ejercicios</option>
-              <option value="Lesiones">Lesiones</option>
-              <option value="Tumores">Tumores</option>
-            </select>
+            
+            <label for="area" class="creationlabel">Tema</label>
+        <select id="area" name="topic_id" data-name="area" class="creationinput w-select">
+          @foreach ($temas as $tema)
+              <option value="{{ $tema->id }}">{{ $tema->name }}</option>
+          @endforeach
+        </select>
+
             <label for="description" class="creationlabel">Contenido</label>
             <textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input">{{ $blog->description }}</textarea>
             <!--<label for="name" class="creationlabel">Youtube</label>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Topic;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -12,8 +13,11 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::all();
+        $temas = Topic::all();
 
-        return view ('posts')->with('blogs', $blogs);
+        return view ('posts')
+        ->with('blogs', $blogs)
+        ->with('temas', $temas);
     }
 
     //VISTA INDEX
@@ -28,7 +32,9 @@ class BlogController extends Controller
     //FORMULARIO DE CREACIÓN
     public function create()
     {
-        return view('create');
+        $temas = Topic::all();
+
+        return view('create')->with('temas', $temas);
     }
 
     public function store(Request $request)
@@ -56,7 +62,10 @@ class BlogController extends Controller
     public function edit($id)
     {
         $blog = Blog::find($id);
-        return view('edit')->with('blog', $blog);
+        $temas = Topic::all();
+        return view('edit')
+        ->with('blog', $blog)
+        ->with('temas', $temas);
     }
 
     public function update(Request $request, $id)
