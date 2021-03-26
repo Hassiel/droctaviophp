@@ -65,9 +65,9 @@
         <div data-w-id="4d6a3c60-01d9-1ec6-bd68-58fa88d3401e" style="-webkit-transform:translate3d(0, 0, 0) scale3d(2, null, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(2, null, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(2, null, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(2, null, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="overlap"></div>
       </div>
       <div class="content-wrapper">
-        <h1 data-w-id="b45ae149-693c-8e76-bf38-3d344e32869f" style="opacity:0;-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="heading-h1"><strong class="bold-text">Dr. Salvador Octavio</strong></h1>
-        <h2 class="h2hero"><strong data-w-id="27214a07-b3aa-fe6c-f733-3d382b01dfea" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="bold-text">Restitución de articulaciones y salvamento de extremidades</strong></h2>
-        <p data-w-id="3f65ad01-f3ec-7da9-9d06-ebf8e51ffd35" style="opacity:0;-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about-p">Proveer el tratamiento más adecuado y oportuno a mis pacientes, para lograr una pronta recuperación, con calidez en la atención, es mi objetivo principal.</p>
+        <h1  class="heading-h1"><strong class="bold-text">Dr. Salvador Octavio</strong></h1>
+        <h2 class="h2hero"><strong  class="bold-text">Restitución de articulaciones y salvamento de extremidades</strong></h2>
+        <p  class="about-p">Proveer el tratamiento más adecuado y oportuno a mis pacientes, para lograr una pronta recuperación, con calidez en la atención, es mi objetivo principal.</p>
       </div>
     </section>
     <div class="w-layout-grid grid">
@@ -289,7 +289,7 @@
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <a href="#" class="iniciodesesiondoc">Dr. Octavio</a>
+          <a href="{{ route('login') }}" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>

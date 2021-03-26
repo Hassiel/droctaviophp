@@ -63,7 +63,9 @@
                 <span class="badge bg-info text-white" style="font-weight: 600">{{ $blog->topic_id }}</span>
               </div>
             </a>
-            <div class="cardbuttoncontainer">
+            @guest
+                @else
+                <div class="cardbuttoncontainer">
               <a href="{{ route('blogs.edit', $blog->id) }}" class="cardbutton _1 w-inline-block">
                 <img src="images/draw.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
                <form action="{{ route('blogs.destroy', $blog->id) }}" method="POST">
@@ -73,12 +75,15 @@
                 <img src="images/delete.png" loading="lazy" width="20" alt="" class="cardbuttonimage"></a>
                 </form> 
             </div>
+            @endguest
           </div>
         </div>
         @endforeach
       </div>
     </div>
-    <div class="addnewbutton">
+    @guest
+        @else
+      <div class="addnewbutton">
       <a data-w-id="e5c33930-a9d6-c5f2-53ae-f8bf50989d46" href="{{ route('blogs.create') }}" class="blogcard newpost w-inline-block">
         <div class="bloginfocard newpost">
           <div data-w-id="875cdc08-dfa6-61ba-aa8c-fa520186febf" data-animation-type="lottie" data-src="documents/add-post.json" data-loop="0" data-direction="1" data-autoplay="0" data-is-ix2-target="1" data-renderer="svg" data-default-duration="3" data-duration="0" data-ix2-initial-state="0"></div>
@@ -86,6 +91,7 @@
         </div>
       </a>
     </div>
+    @endguest
 
     <!--TEMAS -->
 
@@ -94,9 +100,15 @@
         <div role="list" class="temaslist w-dyn-items w-row">
           @foreach ($temas as $tema)
           <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
+          @guest
+            <a href="{{ route('temas.show', $tema->id) }}" class="coolbutton5 existentes w-inline-block" type="button">                       
+              <div class="text-block-6">{{ $tema->name }}</div>
+            </a>
+              @else
             <a class="coolbutton5 existentes w-inline-block" type="button" data-bs-toggle="modal" data-bs-target="#editarTarea_{{ $tema->id }}">                       
               <div class="text-block-6">{{ $tema->name }}</div>
             </a>
+          @endguest
           </div>
            <!-- Modal -->
             <div class="modal fade" id="editarTarea_{{ $tema->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -141,9 +153,12 @@
           }
         </style>
       </div>
-      <a type="button" class="coolbutton5 w-inline-block mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      @guest
+          @else
+          <a type="button" class="coolbutton5 w-inline-block mt-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
         <div class="text-block-7">Crear nuevo tema</div>
       </a>
+      @endguest
     </div>
   </div>
   </div>

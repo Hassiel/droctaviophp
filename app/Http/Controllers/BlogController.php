@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Blog;
 use App\Models\Topic;
 use Illuminate\Http\Request;
@@ -15,7 +16,7 @@ class BlogController extends Controller
         $blogs = Blog::all();
         $temas = Topic::all();
 
-        return view ('posts')
+        return view ('blogs.posts')
         ->with('blogs', $blogs)
         ->with('temas', $temas);
     }
@@ -34,7 +35,7 @@ class BlogController extends Controller
     {
         $temas = Topic::all();
 
-        return view('create')->with('temas', $temas);
+        return view('blogs.create')->with('temas', $temas);
     }
 
     public function store(Request $request)
@@ -47,7 +48,7 @@ class BlogController extends Controller
             'topic_id' => $request->topic_id,
         ]);
 
-        return view('show')->with('blog' ,$blog);
+        return view('blogs.show')->with('blog' ,$blog);
     }
 
     //VISTA DE UNA SOLA BLOG
@@ -55,7 +56,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
 
-        return view('show')->with('blog' ,$blog);
+        return view('blogs.show')->with('blog' ,$blog);
     }
 
     //ACTUALIZAR O EDITAR BLOG
@@ -63,7 +64,7 @@ class BlogController extends Controller
     {
         $blog = Blog::find($id);
         $temas = Topic::all();
-        return view('edit')
+        return view('blogs.edit')
         ->with('blog', $blog)
         ->with('temas', $temas);
     }
@@ -80,7 +81,7 @@ class BlogController extends Controller
             'topic_id' => $request->topic_id,
         ]);
 
-        return view('show')->with('blog' ,$blog);
+        return view('blogs.show')->with('blog' ,$blog);
     }
 
     public function destroy($id)

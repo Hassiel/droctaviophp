@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
+
+
 Route::get('/', [
     'uses'=>'App\Http\Controllers\BlogController@principal', 
     'as' => 'principal' 
@@ -20,4 +24,6 @@ Route::get('/', [
 
 Route::resource('/blogs', 'App\Http\Controllers\BlogController');
 
-Route::resource('/temas', 'App\Http\Controllers\TopicController');
+    Route::resource('/temas', 'App\Http\Controllers\TopicController');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
