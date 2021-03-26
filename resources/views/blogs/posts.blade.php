@@ -189,6 +189,7 @@
           </div>
         </div>
       </div>
+      
   <!--FOOTER -->
   <footer id="footer" class="footer">
     <div class="footercontainer">

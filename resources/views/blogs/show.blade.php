@@ -45,9 +45,43 @@
     </div>
   </section>
   <div class="sectionextra">
-    <h3 class="titulo-section">{{ $blog->name }}</h3>
+    <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
     <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="postimage">
-    <p class="post-information">{{ $blog->description }}</p>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="titulo-section">
+            <h1>{{ $blog->name }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="mt-5 col-lg-8 col-md-10 mx-auto post-information">
+          <p>{{ $blog->description }}</p>
+
+          <h2 class="section-heading"">The Final Frontier</h2>
+
+          <p></p>
+
+          <blockquote class="blockquote"></blockquote>
+
+          <h2 class="section-heading"" >Reaching for the Stars</h2>
+
+          <p></p>
+
+        </div>
+      </div>
+    </div>
+  </article>
+
     <div class="w-layout-grid blog grid-2">
       <a href="#" class="blogcard w-inline-block">
         <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
@@ -58,6 +92,10 @@
       </a>
     </div>
   </div>
+  <!--PRUEBA-->
+  
+
+  <!--PRUEBA-->
   <footer id="footer" class="footer section">
     <div class="footercontainer">
       <div class="div-block-2">
