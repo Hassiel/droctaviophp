@@ -34,8 +34,45 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block">
-      <img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+   <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
+        <a href="{{ route('principal') }}" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <div class="nav-bar">
+          <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
+            <a href="{{ route('principal') }}" class="link-scroll">Inicio</a>
+          </div>
+          <div data-w-id="599162f8-23a6-0218-73f5-5327cf4b1258" class="element-nav">
+            <a href="{{ route('blogs.index') }}" class="link-scroll">Blog</a>
+          </div>
+        </div>
+       @guest
+				<a href="{{ url()->previous() }}" class="backbutton w-inline-block me-3" style="position: static" data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40">
+          <img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+          <div class="volvertext">Volver</div>
+        </a>
+			@else
+			<div class="dropdown">
+				<button class="btn btn-outline-dark me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					Bienvenido, {{ Auth::user()->name }}
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li>
+						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        Cerrar Sesión
+                    	</a>
+
+	                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+	                        @csrf
+	                    </form>
+                	</li>
+          <li>
+            <a class="dropdown-item" href="{{ url()->previous() }}"">
+                        Volver
+            </a>
+          </li>         
+				</ul>
+			</div>
+			@endguest
+      </nav>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
@@ -82,18 +119,30 @@
     </div>
   </article>
 
-    <div class="w-layout-grid blog grid-2">
-      <a href="#" class="blogcard w-inline-block">
-        <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
-        <div class="bloginfocard">
-          <h4 class="blogcardheader">Heading</h4>
-          <p class="blogcardinfo">Prueba</p>
+    <div class="temasdiv mt-5">
+      <div class="w-dyn-list">
+        <div role="list" class="temaslist w-dyn-items w-row">
+          @foreach ($temas as $tema)
+          <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
+            <a href="{{ route('temas.show', $tema->id) }}" class="coolbutton5 existentes w-inline-block" type="button">                       
+              <div class="text-block-6">{{ $tema->name }}</div>
+            </a>
+          </div>
+          @endforeach
         </div>
-      </a>
+      </div>
+      <div class="w-embed">
+        <style>
+        .coolbutton5:hover {
+	box-shadow: 0 0 5px #97f9af,
+							0 0 25px #97f9af,
+              0 0 50px #97f9af,
+              0 0 200px #97f9af;
+          }
+        </style>
+      </div>
     </div>
   </div>
-  <!--PRUEBA-->
-  
 
   <!--PRUEBA-->
   <footer id="footer" class="footer section">
@@ -104,7 +153,7 @@
           <p class="paragraph-4">Hospital Angeles León, Gto.</p>
         </a>
       </div>
-      <a href="#" class="btntop w-inline-block">
+      <a href="#Hero" class="btntop w-inline-block">
         <div class="btntop-txt">Volver arriba</div><img src="images/2.svg" loading="lazy" width="30" alt="" class="btntop-img">
       </a>
     </div>
@@ -128,7 +177,7 @@
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <a href="#" class="iniciodesesiondoc">Dr. Octavio</a>
+          <a href="#Hero" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>
@@ -139,8 +188,6 @@
       </a>
     </div>
   </footer>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ route('blogs.index') }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
-    <div class="volvertext">Volver</div>
   </a>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb84b55d6eff209e92250ed" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="{{ asset('js/webflow.js') }}" type="text/javascript"></script>
@@ -149,5 +196,6 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
     crossorigin="anonymous"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <script></script>
 </body>
 </html>

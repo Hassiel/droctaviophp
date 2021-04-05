@@ -55,8 +55,11 @@ class BlogController extends Controller
     public function show($id)
     {
         $blog = Blog::find($id);
+        $temas = Topic::all();
 
-        return view('blogs.show')->with('blog' ,$blog);
+        return view('blogs.show')
+        ->with('blog' ,$blog)
+        ->with('temas', $temas);
     }
 
     //ACTUALIZAR O EDITAR BLOG

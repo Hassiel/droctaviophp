@@ -12,6 +12,7 @@
   <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('css/drsalvadoroctavio.webflow.css') }}" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
   <script type="text/javascript">WebFont.load({  google: {    families: ["Poppins:100,200,300,regular,500,600,700,800,900","DM Serif Display:regular","Yeseva One:regular"]  }});</script>
   <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
@@ -28,7 +29,44 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+    <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
+        <a href="{{ route('principal') }}" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <div class="nav-bar">
+          <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
+            <a href="{{ route('principal') }}" class="link-scroll">Inicio</a>
+          </div>
+          <div data-w-id="599162f8-23a6-0218-73f5-5327cf4b1258" class="element-nav">
+            <a href="{{ route('blogs.index') }}" class="link-scroll">Blog</a>
+          </div>
+        </div>
+       @guest
+				<a href="{{ url()->previous() }}" class="backbutton w-inline-block me-3" style="position: static" data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40">
+          <img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+          <div class="volvertext">Volver</div>
+        </a>
+			@else
+			<div class="dropdown">
+				<button class="btn btn-outline-dark me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					Bienvenido, {{ Auth::user()->name }}
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li>
+						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        Cerrar Sesión
+            </a>
+	            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+	              @csrf
+	            </form>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ url()->previous() }}"">
+                        Volver
+            </a>
+          </li>  
+				</ul>
+			</div>
+			@endguest
+      </nav>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
@@ -37,9 +75,6 @@
       <div class="l-nea"></div>
     </div>
   </section>
-  <a data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40" href="{{ URL::previous() }}" class="backbutton w-inline-block"><img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
-    <div class="volvertext">Volver</div>
-  </a>
   <div class="sectionextra publish">
     <div class="w-form">
       <form action="{{ route('blogs.update', $blog->id) }}" method="POST">
@@ -116,5 +151,9 @@
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5fb84b55d6eff209e92250ed" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="{{ asset('js/webflow.js') }}" type="text/javascript"></script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+  <!--JAVA BOOTSTAP!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+    crossorigin="anonymous"></script>
 </body>
 </html>

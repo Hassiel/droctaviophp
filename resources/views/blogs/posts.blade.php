@@ -34,7 +34,45 @@
 </head>
 <body>
   <section id="Hero" class="hero">
-    <a href="{{ route('principal') }}" class="link-block-3 w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback"></a>
+    <nav data-w-id="3603ae1a-bd29-ec2e-af08-5f213dd8c0ad" class="header">
+        <a href="{{ route('principal') }}" class="logo w-inline-block"><img src="images/LOGO-DR.png" loading="lazy" width="114" sizes="(max-width: 479px) 100vw, 114px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="image"></a>
+        <div class="nav-bar">
+          <div data-w-id="4321e1a5-9853-4cca-936e-f5a184d2e660" class="element-nav">
+            <a href="{{ route('principal') }}" class="link-scroll">Inicio</a>
+          </div>
+          <div data-w-id="599162f8-23a6-0218-73f5-5327cf4b1258" class="element-nav">
+            <a href="{{ route('blogs.index') }}" class="link-scroll">Blog</a>
+          </div>
+        </div>
+       @guest
+				<a href="{{ route('principal') }}" class="backbutton w-inline-block me-3" style="position: static" data-w-id="f7cb3604-db2d-b2c1-500e-b014b4645c40">
+          <img src="images/left-arrow.svg" loading="lazy" width="25" alt="" class="volverarrow">
+          <div class="volvertext">Volver</div>
+        </a>
+			@else
+			<div class="dropdown">
+				<button class="btn btn-outline-dark me-4" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					Bienvenido, {{ Auth::user()->name }}
+				</button>
+				<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					<li>
+						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                        Cerrar Sesión
+                    	</a>
+
+	                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+	                        @csrf
+	                    </form>
+                	</li>
+          <li>
+            <a class="dropdown-item" href="{{ url()->previous() }}"">
+                        Volver
+            </a>
+          </li>         
+				</ul>
+			</div>
+			@endguest
+      </nav>
     <div class="w-layout-grid grid">
       <div class="l-nea"></div>
       <div class="l-nea"></div>
