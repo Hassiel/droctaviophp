@@ -13,7 +13,7 @@ class Topic extends Model
         'name'
     ];
 
-    public function blog()
+    public function blogs()
     {
         return $this->hasMany(Blog::class);
     }

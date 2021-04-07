@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\Models\Topic;
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class TopicController extends Controller
@@ -35,7 +36,9 @@ class TopicController extends Controller
     public function show($id)
     {
         $tema = Topic::find($id);
-        return view('temas.show')->with('tema', $tema);
+
+        return view('temas.show')
+        ->with('tema', $tema);
 
     }
 
