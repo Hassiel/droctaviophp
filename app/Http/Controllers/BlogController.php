@@ -13,7 +13,7 @@ class BlogController extends Controller
     //VISTA BLOGS
     public function index()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::simplePaginate(12);
         $temas = Topic::all();
 
         return view ('blogs.posts')
