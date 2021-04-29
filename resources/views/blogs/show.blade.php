@@ -177,7 +177,7 @@
   document.write(new Date().getFullYear());
 </script>
           </div>
-          <a href="#Hero" class="iniciodesesiondoc">Dr. Octavio</a>
+          <a href="{{ route('login') }}" class="iniciodesesiondoc">Dr. Octavio</a>
           <div class="text-block-4">  Derechos Reservados.</div>
         </div>
       </div>

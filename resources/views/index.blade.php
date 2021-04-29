@@ -50,6 +50,10 @@
             <a href="#blog" class="link-scroll">Blog</a>
             <a href="#blog" class="section-indicator w-inline-block"></a>
           </div>
+          <div data-w-id="599162f8-23a6-0218-73f5-5327cf4b1258" class="element-nav">
+            <a href="#tienda" class="link-scroll">Tienda</a>
+            <a href="#tienda" class="section-indicator w-inline-block"></a>
+          </div>
           <div data-w-id="f3f7fab7-7af3-a2d7-1d55-c562a32b476f" class="element-nav">
             <a href="#contacto" class="link-scroll">Contacto</a>
             <a href="#contacto" class="section-indicator w-inline-block"></a>
@@ -193,6 +197,25 @@
         @endforeach
       </div>
       <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
+      <link rel="prefetch" href="{{ route('blogs.index') }}">
+    </div>
+  </section>
+  <section id="tienda" class="section-wrapper _2 _3">
+    <div class="section-content-wrapper especialidades">
+      <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Productos</h2>
+      <div class="w-layout-grid blog">
+        @foreach ($blogs as $blog)
+          <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+            <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+              <div class="bloginfocard">
+                  <h4 class="blogcardheader">{{ $blog->name }}</h4>
+                  <p class="blogcardinfo">{{ $blog->area }}</p>
+                  <p class="blogcardinfo date">{{ $blog->created_at }}</p>
+              </div>
+          </a>
+        @endforeach
+      </div>
+      <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver todos los productos</a>
       <link rel="prefetch" href="{{ route('blogs.index') }}">
     </div>
   </section>

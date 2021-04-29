@@ -84,6 +84,9 @@
         <label for="name" class="creationlabel">Título</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" required="">
         
+        <label for="" class="creationlabel">Imagen</label>
+        <input type="file" required="" name="blog_image">
+
         <label for="area" class="creationlabel">Tema</label>
         <select id="area" name="topic_id" data-name="area" class="creationinput w-select">
           @foreach ($temas as $tema)
