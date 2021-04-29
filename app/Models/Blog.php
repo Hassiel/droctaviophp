@@ -10,7 +10,7 @@ class Blog extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name', 'area', 'description', 'youtube', 'topic_id'
+        'name', 'area', 'description', 'youtube', 'topic_id', 'image_path'
     ];
 
     public function topic()

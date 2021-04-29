@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Image;
+use Str;
 use Auth;
 use App\Models\Blog;
 use App\Models\Topic;
@@ -40,28 +42,37 @@ class BlogController extends Controller
 
     public function store(Request $request)
     {
+
+        //Guardar imagenes
+        $imagen = $request->file('image');
+
+        $nombreImagen = time() . '-' . Str::slug($request->name) . '.' . $imagen->getClientOriginalExtension();
+
+        $ubicacionImagen = public_path('b_images/' . $nombreImagen);
+
+        Image::make($imagen)->resize(1200, null, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($ubicacionImagen);
+
         $blog = Blog::create([
             'name' => $request->name,
             'area' => $request->area,
             'description' => $request->description,
             'youtube' => $request->youtube,
             'topic_id' => $request->topic_id,
+            'image_path' => $nombreImagen,
         ]);
 
-        return view('blogs.show')->with('blog' ,$blog);
+        return redirect()->route('blogs.index');
     }
 
     //VISTA DE UNA SOLA BLOG
     public function show($id)
     {
         $blog = Blog::find($id);
-        $temas = Topic::all();
 
-        return view('blogs.show')
-        ->with('blog' ,$blog)
-        ->with('temas', $temas);
+        return view('blogs.show')->with('blog', $blog);
     }
-
     //ACTUALIZAR O EDITAR BLOG
     public function edit($id)
     {

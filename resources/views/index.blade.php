@@ -187,7 +187,7 @@
       <div class="w-layout-grid blog">
         @foreach ($blogs as $blog)
           <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
-            <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+            <img src="{{ asset('b_images/' . $blog->image_path) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                   <h4 class="blogcardheader">{{ $blog->name }}</h4>
                   <p class="blogcardinfo">{{ $blog->area }}</p>
