@@ -204,13 +204,12 @@
     <div class="section-content-wrapper especialidades">
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Productos</h2>
       <div class="w-layout-grid blog">
-        @foreach ($blogs as $blog)
-          <a href="{{ route('tienda.show', $blog->id) }}" class="blogcard w-inline-block">
-            <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
+        @foreach ($productos as $producto)
+          <a href="{{ route('productos.show', $producto->id) }}" class="blogcard w-inline-block">
+            <img src="{{ asset('p_images/' . $producto->image_p) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
-                  <h4 class="blogcardheader">{{ $blog->name }}</h4>
-                  <p class="blogcardinfo">{{ $blog->area }}</p>
-                  <p class="blogcardinfo date">{{ $blog->created_at }}</p>
+                  <h4 class="blogcardheader">{{ $producto->name }}</h4>
+                  <p class="blogcardinfo">${{ $producto->price }}</p>
               </div>
           </a>
         @endforeach

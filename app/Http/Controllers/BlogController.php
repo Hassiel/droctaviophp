@@ -7,6 +7,7 @@ use Str;
 use Auth;
 use App\Models\Blog;
 use App\Models\Topic;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -27,8 +28,11 @@ class BlogController extends Controller
     public function principal()
     {
         $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $productos = Producto::inRandomOrder()->take(3)->get();
 
-        return view ('index')->with('blogs', $blogs);
+        return view ('index')
+        ->with('blogs', $blogs)
+        ->with('productos', $productos);
     }
     
     //VISTA CREAR
@@ -61,6 +65,11 @@ class BlogController extends Controller
             'youtube' => $request->youtube,
             'topic_id' => $request->topic_id,
             'image_path' => $nombreImagen,
+            'quote' => $request->quote, 
+            'subtitulo1' => $request->subtitulo1, 
+            'subtitulo2' => $request->subtitulo2, 
+            'subdesc1' => $request->subdesc1, 
+            'subdesc2' => $request->subdesc2,
         ]);
 
         return redirect()->route('blogs.index');
@@ -93,9 +102,14 @@ class BlogController extends Controller
             'description' => $request->description,
             'youtube' => $request->youtube,
             'topic_id' => $request->topic_id,
+            'quote' => $request->quote, 
+            'subtitulo1' => $request->subtitulo1, 
+            'subtitulo2' => $request->subtitulo2, 
+            'subdesc1' => $request->subdesc1, 
+            'subdesc2' => $request->subdesc2,
         ]);
 
-        return view('blogs.show')->with('blog' ,$blog);
+        return redirect()->route('blogs.index');
     }
 
     public function destroy($id)

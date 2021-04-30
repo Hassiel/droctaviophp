@@ -22,15 +22,15 @@
         <div class="mt-5 col-lg-8 col-md-10 mx-auto post-information">
           <p>{{ $blog->description }}</p>
 
-          <h2 class="section-heading"">The Final Frontier</h2>
+          <h2 class="section-heading"">{{ $blog->subtitulo1 }}</h2>
 
-          <p></p>
+          <p>{{ $blog->subdesc1 }}</p>
 
-          <blockquote class="blockquote"></blockquote>
+          <blockquote class="blockquote">{{ $blog->quote }}</blockquote>
 
-          <h2 class="section-heading"" >Reaching for the Stars</h2>
+          <h2 class="section-heading"" >{{ $blog->subtitulo2 }}</h2>
 
-          <p></p>
+          <p>{{ $blog->subdesc2 }}</p>
 
         </div>
       </div>

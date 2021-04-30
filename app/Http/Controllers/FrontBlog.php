@@ -7,6 +7,7 @@ use Str;
 use Auth;
 use App\Models\Blog;
 use App\Models\Topic;
+use App\Models\Producto;
 use Illuminate\Http\Request;
 
 class FrontBlog extends Controller
@@ -26,8 +27,12 @@ class FrontBlog extends Controller
     public function principal()
     {
         $blogs = Blog::orderBy('created_at', 'desc')->take(3)->get();
+        $productos = Producto::inRandomOrder()->take(3)->get();
 
-        return view ('index')->with('blogs', $blogs);
+
+        return view ('index')
+        ->with('blogs', $blogs)
+        ->with('productos', $productos);;
     }
 
     //VISTA DE UNA SOLA BLOG

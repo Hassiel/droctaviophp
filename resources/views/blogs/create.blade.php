@@ -16,8 +16,23 @@
               <option value="{{ $tema->id }}">{{ $tema->name }}</option>
           @endforeach
         </select>
-        <label for="description" class="creationlabel">Contenido</label>
+        <label for="description" class="creationlabel">Contenido Principal</label>
         <textarea spellcheck="true" placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
+
+        <label for="quote">Frase</label>
+        <input type="text" class="creationinput w-input" maxlength="256" name="quote" id="quote" placeholder="Frase importante" spellcheck="true" class="creationinput w-input">
+
+        <label for="subtitulo1">Sub Título1</label>
+        <input type="text"spellcheck="true" placeholder="Sub Titulo 1" id="subtitulo1" class="creationinput w-input" name="subtitulo1">
+
+        <label for="subdesc1">Desarrollo de subtitulo1</label>
+        <textarea name="subdesc1" id="subdesc1" cols="30" rows="10" spellcheck="true" maxlength="5000" class="creationinput w-input"></textarea>
+
+        <label for="subtitulo2">Sub Título2</label>
+        <input type="text" spellcheck="true" placeholder="Sub Titulo 2" id="subtitulo2" class="creationinput w-input" name="subtitulo2">
+
+        <label for="subdesc2">Desarrollo de subtitulo1</label>
+        <textarea name="subdesc2" id="subdesc2" cols="30" rows="10" spellcheck="true" maxlength="5000" class="creationinput w-input"></textarea>
         <!--<label for="name" class="creationlabel">Youtube</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="youtube" data-name="youtube" placeholder="Link de youtube (si tiene alguno)">-->
         <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button">

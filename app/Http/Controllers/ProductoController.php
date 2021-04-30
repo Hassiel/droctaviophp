@@ -57,13 +57,17 @@ class ProductoController extends Controller
 
         return view('productos.show')
         ->with('producto', $producto)
-        ->with('productos', $productos);;
+        ->with('productos', $productos);
     }
 
 
     public function edit($id)
     {
-        return view('productos.edit');
+        $producto = Producto::find($id);
+        
+        return view('productos.edit')
+        ->with('producto', $producto);
+
     }
 
 
@@ -79,7 +83,7 @@ class ProductoController extends Controller
             'model' => $request->model
         ]);
 
-        return view('productos.show')->with('producto' ,$producto);
+        return redirect()->route('productos.index');
     }
 
     public function destroy($id)
