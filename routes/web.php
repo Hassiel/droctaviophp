@@ -34,5 +34,3 @@ Route::resource('/temas', 'App\Http\Controllers\TopicController');
 Route::resource('/productos', 'App\Http\Controllers\ProductoController');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
