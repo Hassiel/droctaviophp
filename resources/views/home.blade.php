@@ -15,7 +15,7 @@
                         <div class="card-body">
                             <p class="card-text">Crea nuevas publicaciones y agrega nuevos productos a la lista.</p>
                             <a href="{{ route('blogs.index') }}" class="card-link">Publicaciones</a>
-                            <a href="#" class="card-link">Productos</a>
+                            <a href="{{ route('productos.index') }}" class="card-link">Productos</a>
                         </div>
                 </div>
             </div>

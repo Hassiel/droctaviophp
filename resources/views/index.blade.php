@@ -215,8 +215,8 @@
           </a>
         @endforeach
       </div>
-      <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver todos los productos</a>
-      <link rel="prefetch" href="{{ route('blogs.index') }}">
+      <a href="{{ route('productos.index') }}"  class="button cta _2 w-button">Ver todos los productos</a>
+      <link rel="prefetch" href="{{ route('productos.index') }}">
     </div>
   </section>
   <section id="contacto" class="section-wrapper">
