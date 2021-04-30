@@ -5,7 +5,7 @@
         <!--campo de protección de formulario-->
             {{ csrf_field() }}
         <label for="name" class="creationlabel">Título</label>
-        <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" required="">
+        <input spellcheck="true" type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Título" required="">
 
         <label for="image" class="creationlabel">Imagen</label>
         <input type="file" name='image'>
@@ -17,7 +17,7 @@
           @endforeach
         </select>
         <label for="description" class="creationlabel">Contenido</label>
-        <textarea placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
+        <textarea spellcheck="true" placeholder="Contenido..." maxlength="5000" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
         <!--<label for="name" class="creationlabel">Youtube</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="youtube" data-name="youtube" placeholder="Link de youtube (si tiene alguno)">-->
         <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button">

@@ -16,8 +16,11 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function(){
+Route::resource('/blogs', 'App\Http\Controllers\BlogController');
 
-    
+Route::resource('/temas', 'App\Http\Controllers\TopicController');
+
+Route::resource('/productos', 'App\Http\Controllers\ProductoController');
 
 });
 
@@ -27,10 +30,7 @@ Route::get('/', [
     'as' => 'principal' 
 ]);
 
-Route::resource('/blogs', 'App\Http\Controllers\BlogController');
+    Route::resource('/blog', 'App\Http\Controllers\FrontBlog');
+    Route::resource('/tienda', 'App\Http\Controllers\FrontStoreController');
 
-Route::resource('/temas', 'App\Http\Controllers\TopicController');
-
-Route::resource('/productos', 'App\Http\Controllers\ProductoController');
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

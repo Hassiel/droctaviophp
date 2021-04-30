@@ -186,7 +186,7 @@
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Blog</h2>
       <div class="w-layout-grid blog">
         @foreach ($blogs as $blog)
-          <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+          <a href="{{ route('blog.show', $blog->id) }}" class="blogcard w-inline-block">
             <img src="{{ asset('b_images/' . $blog->image_path) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                   <h4 class="blogcardheader">{{ $blog->name }}</h4>
@@ -196,8 +196,8 @@
           </a>
         @endforeach
       </div>
-      <a href="{{ route('blogs.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
-      <link rel="prefetch" href="{{ route('blogs.index') }}">
+      <a href="{{ route('blog.index') }}"  class="button cta _2 w-button">Ver más publicaciones</a>
+      <link rel="prefetch" href="{{ route('blog.index') }}">
     </div>
   </section>
   <section id="tienda" class="section-wrapper _2 _3">
@@ -205,7 +205,7 @@
       <h2 data-w-id="160cdf35-d861-6576-8d54-a55ccc091764" style="-webkit-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="titulo-section especialidades">Productos</h2>
       <div class="w-layout-grid blog">
         @foreach ($blogs as $blog)
-          <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+          <a href="{{ route('tienda.show', $blog->id) }}" class="blogcard w-inline-block">
             <img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                   <h4 class="blogcardheader">{{ $blog->name }}</h4>
@@ -215,8 +215,8 @@
           </a>
         @endforeach
       </div>
-      <a href="{{ route('productos.index') }}"  class="button cta _2 w-button">Ver todos los productos</a>
-      <link rel="prefetch" href="{{ route('productos.index') }}">
+      <a href="{{ route('tienda.index') }}"  class="button cta _2 w-button">Ver todos los productos</a>
+      <link rel="prefetch" href="{{ route('tienda.index') }}">
     </div>
   </section>
   <section id="contacto" class="section-wrapper">

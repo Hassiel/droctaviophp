@@ -5,7 +5,7 @@
         <!--campo de protección de formulario-->
             {{ csrf_field() }}
         <label for="name" class="creationlabel">Nombre del producto</label>
-        <input type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Nombre del producto" required="">
+        <input spellcheck="true" type="text" class="creationinput w-input" maxlength="256" name="name" data-name="name" placeholder="Nombre del producto" required="">
         <br>
         <label for="image" class="creationlabel">Imagen</label>
         <input type="file" name='image'>
@@ -18,7 +18,7 @@
         <label for="model" class="creationlabel">Modelo</label>
         <input type="text" class="creationinput w-input" maxlength="256" name="model" data-name="model" placeholder="Modelo del producto">
         <label for="description" class="creationlabel">Descripción del producto</label>
-        <textarea placeholder="¿Para qué sirve?..." maxlength="2500" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
+        <textarea spellcheck="true" placeholder="¿Para qué sirve?..." maxlength="2500" id="description" name="description" required="" data-name="description" class="creationinput w-input"></textarea>
         <input type="submit" value="Publicar" data-wait="ESPERE..." class="button w-button">
       </form>
       <div class="w-form-done">
