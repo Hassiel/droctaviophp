@@ -1,4 +1,4 @@
-@extends('layouts.blog')
+@extends('layouts.front')
 
 @section('content')
 
@@ -33,7 +33,7 @@
           @foreach ($temas as $tema)
           <div role="listitem" class="collection-item w-dyn-item w-col w-col-4">
           @guest
-            <a href="{{ route('temas.show', $tema->id) }}" class="coolbutton5 existentes w-inline-block" type="button">                       
+            <a href="{{ route('tema.show', $tema->id) }}" class="coolbutton5 existentes w-inline-block" type="button">                       
               <div class="text-block-6">{{ $tema->name }}</div>
             </a>
               @else

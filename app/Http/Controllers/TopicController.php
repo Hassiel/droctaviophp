@@ -12,15 +12,12 @@ class TopicController extends Controller
 
     public function index()
     {
-        ///Colleción de Tareas
-        $temas = Topic::all();
-
-        return view('temas.index') ->with('temas', $temas);
+        return redirect()->route('blogs.index');;
     }
 
     public function create()
     {
-        return view('temas.create');
+        return redirect()->route('blogs.index');
     }
 
     public function store(Request $request)
@@ -36,9 +33,13 @@ class TopicController extends Controller
     public function show($id)
     {
         $tema = Topic::find($id);
+        $blogs = Blog::all();
+        $temas = Topic::all();
 
         return view('temas.show')
-        ->with('tema', $tema);
+        ->with('tema', $tema)
+        ->with('blogs', $blogs)
+        ->with('temas', $temas);
 
     }
 

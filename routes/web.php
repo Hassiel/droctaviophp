@@ -30,7 +30,13 @@ Route::get('/', [
     'as' => 'principal' 
 ]);
 
+Route::get('/privacidad', [
+    'uses'=>'App\Http\Controllers\FrontBlog@privacidad',
+    'as' => 'privacidad'
+]);
+
     Route::resource('/blog', 'App\Http\Controllers\FrontBlog');
     Route::resource('/tienda', 'App\Http\Controllers\FrontStoreController');
+    Route::resource('/tema', 'App\Http\Controllers\FrontTemasController');
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

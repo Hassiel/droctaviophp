@@ -15,7 +15,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="VQN-I-G7lHoYSxWWxJCR_fbR2Xf_DJNwTpH-aj8Axpk" name="google-site-verification">
     <meta content="Webflow" name="generator">
-    <link href="{{ assset('css/normalize.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/normalize.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/webflow.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/drsalvadoroctavio.webflow.css') }}" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -57,7 +57,7 @@
 </head>
 <body>
     <section id="Hero" class="hero">
-        <a href="index.html" class="link-block-3 w-inline-block">
+        <a href="{{ route('principal') }}" class="link-block-3 w-inline-block">
             <img src="images/LOGO-DR.png" loading="lazy" width="158" sizes="(max-width: 479px) 99vw, 158px" srcset="images/LOGO-DR-p-500.png 500w, images/LOGO-DR-p-800.png 800w, images/LOGO-DR-p-1080.png 1080w, images/LOGO-DR-p-1600.png 1600w, images/LOGO-DR-p-2000.png 2000w, images/LOGO-DR-p-2600.png 2600w, images/LOGO-DR-p-3200.png 3200w, images/LOGO-DR.png 5996w" alt="Dr. Octavio" class="logoback">
         </a>
         <div class="w-layout-grid grid">
@@ -95,10 +95,6 @@
                     <p class="paragraph-4">Hospital Angeles León, Gto.</p>
                 </a>
             </div>
-            <a href="#" class="btntop w-inline-block">
-                <div class="btntop-txt">Volver arriba</div>
-                <img src="images/2.svg" loading="lazy" width="30" alt="" class="btntop-img">
-            </a>
         </div>
         <div class="containerfooter">
             <div class="firmadoc">
@@ -123,8 +119,8 @@
                     </a>
                 </div>
                 <div class="derechos-pagina">
-                    <a href="index.html" class="link-block w-inline-block">
-                        <div class="text-block-3">Incio</div>
+                    <a href="{{ route('principal') }}" class="link-block w-inline-block">
+                        <div class="text-block-3">Inicio</div>
                     </a>
                     <div class="iniciodesesiondoc"> ©  </div>
                     <div class="html-embed w-embed w-script">

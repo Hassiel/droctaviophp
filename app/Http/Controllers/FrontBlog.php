@@ -35,6 +35,11 @@ class FrontBlog extends Controller
         ->with('productos', $productos);;
     }
 
+    public function privacidad()
+    {
+        return view('privacy');
+    }
+
     //VISTA DE UNA SOLA BLOG
     public function show($id)
     {

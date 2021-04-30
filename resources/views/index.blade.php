@@ -190,7 +190,6 @@
             <img src="{{ asset('b_images/' . $blog->image_path) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                   <h4 class="blogcardheader">{{ $blog->name }}</h4>
-                  <p class="blogcardinfo">{{ $blog->area }}</p>
                   <p class="blogcardinfo date">{{ $blog->created_at }}</p>
               </div>
           </a>
@@ -302,7 +301,7 @@
           <a href="https://wa.me/+524721208324" target="_blank" class="linkred w-inline-block"><img src="images/whatsapp.png" loading="lazy" width="40" alt="" class="img-red"></a>
         </div>
         <div class="derechos-pagina">
-          <a href="aviso-reglamentario.html" class="link-block w-inline-block">
+          <a href="{{ route('privacidad') }}" class="link-block w-inline-block">
             <div class="text-block-3">Aviso reglamentario</div>
           </a>
           <div class="iniciodesesiondoc"> ©  </div>

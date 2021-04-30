@@ -13,7 +13,7 @@
               <img src="{{ asset('b_images/' . $blog->image_path) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                 <h4 class="blogcardheader">{{ $blog->name }}</h4>
-                <span class="badge bg-info text-white" style="font-weight: 600">{{ $blog->topic_id }}</span>
+                    <span class="badge bg-info text-white" style="font-weight: 600">{{ $blog->topic_id }}</span>
               </div>
             </a>
             @guest
@@ -69,17 +69,8 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edición de tema</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{ $tema->name }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <form action="{{route('temas.update', $tema->id)}}" method="POST">
-                  <div class="modal-body">
-                    <!--campo de protección de formulario-->
-                    {{ csrf_field() }}
-                    {{ method_field('PUT') }}
-                    <!--Campos de formulario-->    
-                    <label for="">Nombre del tema</label>
-                    <input class="form-control" type="text" placeholder="Nombre del tema" name="name" value="{{ $tema->name }}">
                   </div>
                   <div class="modal-footer">
                     <form action="{{ route('temas.destroy', $tema->id) }}" method="POST">
@@ -87,10 +78,8 @@
                         {{ method_field('DELETE') }} 
                           <button type="submit" class="btn btn-outline-danger">Eliminar</button>
                     </form> 
-                      <button type="submit" class="btn btn-outline-success">Guardar cambios</button>
-                      <a href="{{ route('temas.show', $tema->id) }}" type="button" class="btn btn-outline-info">Ver tarea</a>
+                      <a href="{{ route('temas.show', $tema->id) }}" type="button" class="btn btn-outline-info">Ver tema</a>
                   </div>
-                    </form>
                 </div>
               </div>
             </div>

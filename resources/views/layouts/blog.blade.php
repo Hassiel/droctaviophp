@@ -106,7 +106,7 @@
           <a href="https://wa.me/+524721208324" target="_blank" class="linkred w-inline-block"><img src="{{ asset('images/whatsapp.png') }}" loading="lazy" width="40" alt="" class="img-red"></a>
         </div>
         <div class="derechos-pagina">
-          <a href="aviso-reglamentario.html" class="link-block w-inline-block">
+          <a href="{{ route('privacidad') }}" class="link-block w-inline-block">
             <div class="text-block-3">Aviso reglamentario</div>
           </a>
           <div class="iniciodesesiondoc"> ©  </div>
