@@ -12,7 +12,7 @@
         @foreach ($tema->blogs as $blog)
         <div role="listitem" class="w-dyn-item">
           <div class="cardcontainer">
-            <a href="{{ route('blogs.show', $blog->id) }}" class="blogcard w-inline-block">
+            <a href="{{ route('blog.show', $blog->id) }}" class="blogcard w-inline-block">
               <img src="{{ asset('b_images/' . $blog->image_path) }}" loading="lazy" alt="" class="blogimage">
               <div class="bloginfocard">
                 <h4 class="blogcardheader">{{ $blog->name }}</h4>
