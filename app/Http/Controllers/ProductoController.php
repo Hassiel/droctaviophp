@@ -28,7 +28,9 @@ class ProductoController extends Controller
     public function store(Request $request)
     {
         //Guardar imagenes
-        $imagen = $request->file('image');
+
+        if($request->hasFile('image')){
+            $imagen = $request->file('image');
 
         $nombreImagen = time() . '-' . Str::slug($request->name) . '.' . $imagen->getClientOriginalExtension();
 
@@ -37,7 +39,8 @@ class ProductoController extends Controller
         Image::make($imagen)->resize(1200, null, function ($constraint) {
             $constraint->aspectRatio();
         })->save($ubicacionImagen);
-
+        }
+        
         $producto = Producto::create([
             'name' => $request->name,
             'quantity' => $request->quantity,

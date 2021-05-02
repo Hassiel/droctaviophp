@@ -48,15 +48,18 @@ class BlogController extends Controller
     {
 
         //Guardar imagenes
-        $imagen = $request->file('image');
+        if($request->hasFile('image')){
+            $imagen = $request->file('image');
 
-        $nombreImagen = time() . '-' . Str::slug($request->name) . '.' . $imagen->getClientOriginalExtension();
+            $nombreImagen = time() . '-' . Str::slug($request->name) . '.' . $imagen->getClientOriginalExtension();
 
-        $ubicacionImagen = public_path('b_images/' . $nombreImagen);
+            $ubicacionImagen = public_path('b_images/' . $nombreImagen);
 
-        Image::make($imagen)->resize(1200, null, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($ubicacionImagen);
+            Image::make($imagen)->resize(1200, null, function ($constraint) {
+                $constraint->aspectRatio();
+            })->save($ubicacionImagen);
+        }
+        
 
         $blog = Blog::create([
             'name' => $request->name,
